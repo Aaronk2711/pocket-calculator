@@ -54,6 +54,11 @@ function divide() {
   document.getElementById("result").textContent += "/";
 }
 
+function negate() {
+  if (Math.sign(result)) = -1 {
+    document.getElementById("result").
+  }
+}
 
 
 /*function pi() {
@@ -67,7 +72,5 @@ function clear() {
 
 function equals() {
   let answer = document.getElementById("result").innerHTML;
-  console.log('1', answer);
   document.getElementById("result").innerHTML = eval(answer);
-  console.log('2', answer);
 }
