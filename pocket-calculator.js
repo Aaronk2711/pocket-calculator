@@ -60,7 +60,7 @@ function clear() {
 
 
 function equals() {
-  let answer = eval(result);
-  document.getElementById("result").innerHTML = answer;
+  let answer = document.getElementById("result");
+  document.getElementById("result").innerHTML = eval(answer);
   console.log(answer);
 }
