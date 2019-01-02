@@ -54,13 +54,20 @@ function divide() {
   document.getElementById("result").textContent += "/";
 }
 
+
+
+/*function pi() {
+  document.getElementById("result").textContent += "π";
+}*/
+
 function clear() {
   document.getElementById("result").innerHTML = "";
 }
 
 
 function equals() {
-  let answer = document.getElementById("result");
+  let answer = document.getElementById("result").innerHTML;
+  console.log('1', answer);
   document.getElementById("result").innerHTML = eval(answer);
-  console.log(answer);
+  console.log('2', answer);
 }
