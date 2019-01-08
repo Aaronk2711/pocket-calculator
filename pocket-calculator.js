@@ -8,7 +8,7 @@ function button1() {
     clean();
   }
   document.getElementById("result").textContent += "1";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button2() {
@@ -16,15 +16,11 @@ function button2() {
     clean();
   }
   document.getElementById("result").textContent += "2";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button3() {
-  if (document.getElementById("result").innerHTML = "Sorry, that is not a valid operation.") {
-    clean();
-  }
   document.getElementById("result").textContent += "3";
-  answer = document.getElementById("result").innerHTML;
 }
 
 function button4() {
@@ -32,7 +28,7 @@ function button4() {
     clean();
   }
   document.getElementById("result").textContent += "4";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button5() {
@@ -40,7 +36,7 @@ function button5() {
     clean();
   }
   document.getElementById("result").textContent += "5";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button6() {
@@ -48,7 +44,7 @@ function button6() {
     clean();
   }
   document.getElementById("result").textContent += "6";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button7() {
@@ -56,7 +52,7 @@ function button7() {
     clean();
   }
   document.getElementById("result").textContent += "7";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button8() {
@@ -64,7 +60,7 @@ function button8() {
     clean();
   }
   document.getElementById("result").textContent += "8";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button9() {
@@ -72,7 +68,7 @@ function button9() {
     clean();
   }
   document.getElementById("result").textContent += "9";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function button0() {
@@ -80,7 +76,7 @@ function button0() {
     clean();
   }
   document.getElementById("result").textContent += "0";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function add() {
@@ -88,7 +84,7 @@ function add() {
     clean();
   }
   document.getElementById("result").textContent += "+";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function subtract() {
@@ -96,7 +92,7 @@ function subtract() {
     clean();
   }
   document.getElementById("result").textContent  += "-";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function multiply() {
@@ -104,7 +100,7 @@ function multiply() {
     clean();
   }
   document.getElementById("result").textContent += "*";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function divide() {
@@ -112,7 +108,7 @@ function divide() {
     clean();
   }
   document.getElementById("result").textContent += "/";
-  answer = document.getElementById("result").innerHTML;
+
 }
 
 function clean() {
@@ -132,8 +128,8 @@ function negate() {
 }
 
   function equals() {
-    answer = document.getElementById("result").innerHTML;
 
+    answer = document.getElementById("result").innerHTML;
     if ((Number.isNaN(answer)) || (answer === "Infinity" || (answer = "/0") || (answer = "**") || (answer = "++") || (answer[1,2] == "--"))){
       document.getElementById("result").innerHTML = "Sorry, that is not a valid operation"
     }
