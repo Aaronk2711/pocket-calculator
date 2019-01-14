@@ -1,254 +1,210 @@
 var completed = false;
-var answer;
+var display;
+var total;
 
 do {
 
 function button1() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "1";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
-  }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "1";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button2() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "2";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "2";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button3() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "3";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "3";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button4() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "4";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "4";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button5() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "5";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "5";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button6() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "6";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "6";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button7() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "7";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "7";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button8() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "8";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "8";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button9() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "9";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "9";
+  display = document.getElementById("display").innerHTML;
 }
 
 function button0() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "0";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+  if (display = "") {
+    document.getElementById("display").innerHTML = "0";
   }
+  display = document.getElementById("total").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += "0";
+  display = document.getElementById("display").innerHTML;
 }
 
 function add() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "+";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
+    total = document.getElementById("total").innerHTML;
+    total = total.toString();
+    total += display;
+    total += "+";
+    document.getElementById("display").innerHTML = "";
+    document.getElementById("total").innerHTML = total;
   }
-
-}
 
 function subtract() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent  += "-";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
-  }
-}
+     total = document.getElementById("total").innerHTML;
+     total = total.toString();
+     total += display;
+     total += "-";
+     document.getElementById("display").innerHTML = "";
+     document.getElementById("total").innerHTML = total;
+   }
 
 function multiply() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "*";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
-  }
-}
+      total = document.getElementById("total").innerHTML;
+      total = total.toString();
+      total += display;
+      total += "*";
+      document.getElementById("display").innerHTML = "";
+      document.getElementById("total").innerHTML = total;
+    }
 
 function divide() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += "/";
-  answer = document.getElementById("result").innerHTML;
-  if (answer.length > 3) {
-    comma();
-    document.getElementById("result").innerHTML = answer;
-  }
-}
+       total = document.getElementById("total").innerHTML;
+       total = total.toString();
+       total += display;
+       total += "/";
+       document.getElementById("display").innerHTML = "";
+       document.getElementById("total").innerHTML = total;
+     }
 
 function decimal() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").textContent += ".";
-  answer = document.getElementById("result").innerHTML;
+  display = document.getElementById("display").innerHTML;
+  display = display.toString();
+  document.getElementById("display").textContent += ".";
+  display = document.getElementById("display").innerHTML;
 }
 
-  function comma() {
-  let i;
-  for(i = 0; i < answer.length; i++) {
-    if(answer[i] === ",") {
-      answer = answer.substring(0, i) + answer.substring(i + 1);
-      i--;
-    } else if(answer[i] === ".") {
-        break;
-    }
-  }
-  if(i > 3) {
-    for(let j = i - 3; j > 0; j -= 3) {
-      answer = answer.substring(0, j) + "," + answer.substring(j);
-    }
-  }
-  //if (answer[1,2,3,4] = ",,,," {
-    //clean();
-  //}
+function zero() {
+  document.getElementById("display").innerHTML = "0";
 }
-
-//<p id="result">
-//,
-//  ,   ,   ,  2</p>
 
 function clean() {
-  answer = document.getElementById("result").innerHTML;
-  answer = answer.toString();
-  document.getElementById("result").innerHTML = "";
-  answer = document.getElementById("result").innerHTML;
+  document.getElementById("display").innerHTML = "";
 }
 
 function negate() {
-  answer = document.getElementById("result").innerHTML;
-  answer = eval(answer) * -1;
-  if ((Number.isNaN(answer)) || (answer === "Infinity" || (answer === "/0") || (answer[1,2] === "**") || (answer[1,2] === "++") || (answer[1,2] === "--"))){
-    document.getElementById("result").innerHTML = "Sorry, that is not a valid operation";
+  display = document.getElementById("display").innerHTML;
+  display = eval(display) * -1;
+  if ((Number.isNaN(display)) || (display === "Infinity" || (display === "/0") || (display[1,2] === "**") || (display[1,2] === "++") || (display[1,2] === "--"))){
+    document.getElementById("display").innerHTML = "Sorry, that is not a valid operation";
   }
 
   else {
-  document.getElementById("result").innerHTML = eval(answer);
-  if (answer.length > 3) {
+  document.getElementById("display").innerHTML = eval(display);
+  if (display.length > 3) {
     comma();
-    document.getElementById("result").innerHTML = answer;
+    document.getElementById("display").innerHTML = display;
   }
 
   }
 }
 
 function percentage() {
-  answer = document.getElementById("result").innerHTML;
-  answer = eval(answer);
-  answer = answer / 100;
-  if ((Number.isNaN(answer)) || (answer === "Infinity" || (answer === "/0") || (answer[1,2] === "**") || (answer[1,2] === "++") || (answer[1,2] === "--"))){
-    document.getElementById("result").innerHTML = "Sorry, that is not a valid operation";
+  display = document.getElementById("display").innerHTML;
+  display = eval(display);
+  display = display / 100;
+  if ((Number.isNaN(display)) || (display === "Infinity" || (display === "/0") || (display[1,2] === "**") || (display[1,2] === "++") || (display[1,2] === "--"))){
+    document.getElementById("display").innerHTML = "Sorry, that is not a valid operation";
   }
 
   else {
-  document.getElementById("result").innerHTML = eval(answer);
-  if (answer.length > 3) {
+  document.getElementById("display").innerHTML = eval(display);
+  if (display.length > 3) {
     comma();
-    document.getElementById("result").innerHTML = answer;
+    document.getElementById("display").innerHTML = display;
   }
   }
 }
 
   function equals() {
-    answer = document.getElementById("result").innerHTML;
-    if ((Number.isNaN(answer)) || (answer == null) || (answer == undefined) || (answer === "Infinity" || (answer === "/0") || (answer === "**") || (answer === "++") || (answer === "--"))){
-      document.getElementById("result").innerHTML = "Sorry, that is not a valid operation"
-    }
+    total = document.getElementById("total").innerHTML;
+    total = total.toString();
+    //if ((Number.isNaN(total)) || (total === null) || (total === undefined) || (total === "Infinity")){
+      //document.getElementById("display").innerHTML = "Sorry, that is not a valid operation"
+    //}
 
-    else {
-    document.getElementById("result").innerHTML = eval(answer);
-    if (answer.length > 3) {
-      comma();
-      document.getElementById("result").innerHTML = answer;
-    }
-    }
+    //else {
+    document.getElementById("display").innerHTML = eval(total);
+  //  if (total.length > 3) {
+    //  document.getElementById("display").innerHTML = display;
+    //}
+    //}
     completed = true;
   }
 
 
 /*function pi() {
-  document.getElementById("result").textContent += "π";
+  document.getElementById("display").textContent += "π";
 }*/
 
 } while(completed = false)
