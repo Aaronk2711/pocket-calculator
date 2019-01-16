@@ -1,34 +1,36 @@
 var completed = false;
 var display = "0";
-var total;
+var total = "0";
 
 do {
 
 function button1() {
+  console.log(display);
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "1";
   display = document.getElementById("display").innerHTML;
 }
 
 function button2() {
+  display = display.toString();
+  console.log("trial1", display);
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "2";
   display = document.getElementById("display").innerHTML;
 }
 
 function button3() {
+  display = display.toString();
+  console.log("trial2", display);
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "3";
   display = document.getElementById("display").innerHTML;
@@ -38,7 +40,6 @@ function button4() {
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "4";
   display = document.getElementById("display").innerHTML;
@@ -48,7 +49,6 @@ function button5() {
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "5";
   display = document.getElementById("display").innerHTML;
@@ -58,7 +58,6 @@ function button6() {
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "6";
   display = document.getElementById("display").innerHTML;
@@ -68,7 +67,6 @@ function button7() {
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "7";
   display = document.getElementById("display").innerHTML;
@@ -78,7 +76,6 @@ function button8() {
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "8";
   display = document.getElementById("display").innerHTML;
@@ -88,7 +85,6 @@ function button9() {
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "9";
   display = document.getElementById("display").innerHTML;
@@ -98,7 +94,6 @@ function button0() {
   if (display === "0") {
     wipe();
   }
-  display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "0";
   display = document.getElementById("display").innerHTML;
@@ -107,9 +102,11 @@ function button0() {
 function add() {
     total = document.getElementById("total").innerHTML;
     total = total.toString();
+    if (total === "0") {
+      extraWipe();
+    }
     total += display;
     total += "+";
-    document.getElementById("display").innerHTML = "";
     document.getElementById("total").innerHTML = total;
     clean();
 
@@ -118,27 +115,33 @@ function add() {
 function subtract() {
      total = document.getElementById("total").innerHTML;
      total = total.toString();
+     if (total === "0") {
+       extraWipe();
+     }
      total += display;
      total += "-";
-     document.getElementById("display").innerHTML = "";
      document.getElementById("total").innerHTML = total;
    }
 
 function multiply() {
       total = document.getElementById("total").innerHTML;
       total = total.toString();
+      if (total === "0") {
+        extraWipe();
+      }
       total += display;
       total += "*";
-      document.getElementById("display").innerHTML = "";
       document.getElementById("total").innerHTML = total;
     }
 
 function divide() {
        total = document.getElementById("total").innerHTML;
        total = total.toString();
+       if (total === "0") {
+         extraWipe();
+       }
        total += display;
        total += "/";
-       document.getElementById("display").innerHTML = "";
        document.getElementById("total").innerHTML = total;
      }
 
@@ -154,11 +157,11 @@ function wipe() {
 }
 
 function extraWipe() {
-  document.getElementById("display").innerHTML = "";
   document.getElementById("total").innerHTML = "";
 }
 
 function clean() {
+  document.getElementById("display").innerHTML = "";
   document.getElementById("display").innerHTML = "0";
 }
 

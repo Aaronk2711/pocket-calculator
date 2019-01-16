@@ -17,6 +17,6 @@ button {
   background-color: yellow;
 }
 
-P:empty {
-  background-color: yellow;
+p:empty {
+  background-color: green;
 }
