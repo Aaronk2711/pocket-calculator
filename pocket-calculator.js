@@ -1,10 +1,13 @@
 var completed = false;
-var display;
+var display = "0";
 var total;
 
 do {
 
 function button1() {
+  if (display === "0") {
+    wipe();
+  }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
   document.getElementById("display").textContent += "1";
@@ -12,8 +15,8 @@ function button1() {
 }
 
 function button2() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -22,8 +25,8 @@ function button2() {
 }
 
 function button3() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -32,8 +35,8 @@ function button3() {
 }
 
 function button4() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -42,8 +45,8 @@ function button4() {
 }
 
 function button5() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -52,8 +55,8 @@ function button5() {
 }
 
 function button6() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -62,8 +65,8 @@ function button6() {
 }
 
 function button7() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -72,8 +75,8 @@ function button7() {
 }
 
 function button8() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -82,8 +85,8 @@ function button8() {
 }
 
 function button9() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -92,8 +95,8 @@ function button9() {
 }
 
 function button0() {
-  if (display = "") {
-    document.getElementById("display").innerHTML = "0";
+  if (display === "0") {
+    wipe();
   }
   display = document.getElementById("total").innerHTML;
   display = display.toString();
@@ -108,6 +111,8 @@ function add() {
     total += "+";
     document.getElementById("display").innerHTML = "";
     document.getElementById("total").innerHTML = total;
+    clean();
+
   }
 
 function subtract() {
@@ -144,12 +149,22 @@ function decimal() {
   display = document.getElementById("display").innerHTML;
 }
 
-function zero() {
-  document.getElementById("display").innerHTML = "0";
+function wipe() {
+  document.getElementById("display").innerHTML = "";
+}
+
+function extraWipe() {
+  document.getElementById("display").innerHTML = "";
+  document.getElementById("total").innerHTML = "";
 }
 
 function clean() {
-  document.getElementById("display").innerHTML = "";
+  document.getElementById("display").innerHTML = "0";
+}
+
+function extraClean() {
+  document.getElementById("display").innerHTML = "0";
+  document.getElementById("total").innerHTML = "0";
 }
 
 function negate() {
@@ -189,16 +204,17 @@ function percentage() {
   function equals() {
     total = document.getElementById("total").innerHTML;
     total = total.toString();
-    //if ((Number.isNaN(total)) || (total === null) || (total === undefined) || (total === "Infinity")){
-      //document.getElementById("display").innerHTML = "Sorry, that is not a valid operation"
-    //}
-
-    //else {
+    total += display;
+    document.getElementById("total").innerHTML = total;
+    if ((Number.isNaN(total)) || (total === null) || (total === undefined) || (total === "Infinity")){
+      document.getElementById("display").innerHTML = "Sorry, that is not a valid operation"
+    }
+    console.log(total);
+    console.log(eval(total));
     document.getElementById("display").innerHTML = eval(total);
-  //  if (total.length > 3) {
-    //  document.getElementById("display").innerHTML = display;
-    //}
-    //}
+
+
+
     completed = true;
   }
 

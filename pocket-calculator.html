@@ -11,19 +11,21 @@
     <script type="text/javascript" src="pocket-calculator.js"></script>
   </head>
 
-  <body>
     <div class="header">
       <h1>Pocket Calculator</h1>
     </div>
 
-    <div id = "total">
-
-      <p>
+  <body onload = extraClean();>
+    <div>
+      <p id = "total">
 
       </p>
 
     </div>
 
+</body>
+
+<body>
 
 <div class = "grid">
     <div id="1button">
@@ -96,12 +98,18 @@
 
 
     <div id = "clean">
-            <button onclick = "clean();">AC</button>
+            <button onclick = "clean();">Clear Current</button>
         </div>
+
+    <div id = "cleanTotal">
+          <button onclick = "extraClean();">Clear All</button>
+      </div>
 
     <div id = "decimal">
             <button onclick = "decimal();">.</button>
         </div>
+
+      </body>
 
 <!-- <div class = "other" id = "pi">
             <button onclick = "pi();">π</button>
@@ -109,11 +117,17 @@
 
 </div>
 
+
+<body onload = 'extraClean();'>
+
     <div class = "answer">
 
         <h3> Display </h3>
-          <p id = "display" onload = "zero();">
+          <p id = "display">
 
           </p>
 
         </div>
+
+      </body>
+      </html>

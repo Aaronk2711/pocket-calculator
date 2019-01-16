@@ -12,3 +12,11 @@ button {
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(100px, auto);
 }
+
+#total {
+  background-color: yellow;
+}
+
+P:empty {
+  background-color: yellow;
+}
