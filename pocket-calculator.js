@@ -5,8 +5,8 @@ var total = "0";
 do {
 
 function button1() {
-  console.log(display);
-  if (display === "0") {
+  display = display.toString();
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -16,8 +16,7 @@ function button1() {
 
 function button2() {
   display = display.toString();
-  console.log("trial1", display);
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -27,8 +26,7 @@ function button2() {
 
 function button3() {
   display = display.toString();
-  console.log("trial2", display);
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -37,7 +35,7 @@ function button3() {
 }
 
 function button4() {
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -46,7 +44,7 @@ function button4() {
 }
 
 function button5() {
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -55,7 +53,7 @@ function button5() {
 }
 
 function button6() {
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -64,7 +62,7 @@ function button6() {
 }
 
 function button7() {
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -73,7 +71,7 @@ function button7() {
 }
 
 function button8() {
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -82,7 +80,7 @@ function button8() {
 }
 
 function button9() {
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -91,7 +89,7 @@ function button9() {
 }
 
 function button0() {
-  if (display === "0") {
+  if (document.getElementById("display").innerHTML === "0") {
     wipe();
   }
   display = display.toString();
@@ -100,16 +98,15 @@ function button0() {
 }
 
 function add() {
-    total = document.getElementById("total").innerHTML;
-    total = total.toString();
-    if (total === "0") {
+    if (document.getElementById('total').innerHTML === "0") {
       extraWipe();
     }
+    total = document.getElementById("total").innerHTML;
+    total = total.toString();
     total += display;
     total += "+";
     document.getElementById("total").innerHTML = total;
-    clean();
-
+    wipe();
   }
 
 function subtract() {
@@ -161,7 +158,6 @@ function extraWipe() {
 }
 
 function clean() {
-  document.getElementById("display").innerHTML = "";
   document.getElementById("display").innerHTML = "0";
 }
 
@@ -178,12 +174,7 @@ function negate() {
   }
 
   else {
-  document.getElementById("display").innerHTML = eval(display);
-  if (display.length > 3) {
-    comma();
-    document.getElementById("display").innerHTML = display;
-  }
-
+  document.getElementById("display").innerHTML = display;
   }
 }
 
@@ -197,10 +188,6 @@ function percentage() {
 
   else {
   document.getElementById("display").innerHTML = eval(display);
-  if (display.length > 3) {
-    comma();
-    document.getElementById("display").innerHTML = display;
-  }
   }
 }
 
@@ -209,11 +196,12 @@ function percentage() {
     total = total.toString();
     total += display;
     document.getElementById("total").innerHTML = total;
-    if ((Number.isNaN(total)) || (total === null) || (total === undefined) || (total === "Infinity")){
+    if ((Number.isNaN(total)) || (eval(total) === null) || (eval(total) === undefined) || (eval(total) === "Infinity")){
       document.getElementById("display").innerHTML = "Sorry, that is not a valid operation"
     }
-    console.log(total);
-    console.log(eval(total));
+    if (total.indexOf("--") > -1) {
+      total.replace("--", "+");
+    }
     document.getElementById("display").innerHTML = eval(total);
 
 
