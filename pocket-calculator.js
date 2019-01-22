@@ -110,37 +110,40 @@ function add() {
   }
 
 function subtract() {
-     total = document.getElementById("total").innerHTML;
-     total = total.toString();
-     if (total === "0") {
+    if (document.getElementById("total").innerHTML === "0") {
        extraWipe();
-     }
-     total += display;
-     total += "-";
-     document.getElementById("total").innerHTML = total;
-   }
+    }
+       total = document.getElementById("total").innerHTML;
+    total = total.toString();
+    total += display;
+    total += "-";
+    document.getElementById("total").innerHTML = total;
+    wipe();
+  }
 
 function multiply() {
-      total = document.getElementById("total").innerHTML;
-      total = total.toString();
-      if (total === "0") {
-        extraWipe();
-      }
-      total += display;
-      total += "*";
-      document.getElementById("total").innerHTML = total;
+if (document.getElementById('total').innerHTML === "0") {
+      extraWipe();
     }
+    total = document.getElementById("total").innerHTML;
+    total = total.toString();
+    total += display;
+    total += "*";
+    document.getElementById("total").innerHTML = total;
+    wipe();
+  }
 
 function divide() {
-       total = document.getElementById("total").innerHTML;
-       total = total.toString();
-       if (total === "0") {
-         extraWipe();
-       }
-       total += display;
-       total += "/";
-       document.getElementById("total").innerHTML = total;
-     }
+if (document.getElementById('total').innerHTML === "0") {
+      extraWipe();
+    }
+    total = document.getElementById("total").innerHTML;
+    total = total.toString();
+    total += display;
+    total += "/";
+    document.getElementById("total").innerHTML = total;
+    wipe();
+  }
 
 function decimal() {
   display = document.getElementById("display").innerHTML;
