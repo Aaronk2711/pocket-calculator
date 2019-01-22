@@ -153,7 +153,7 @@ function decimal() {
 }
 
 function wipe() {
-  document.getElementById("display").innerHTML = "";
+  document.getElementById("display").innerHTML = "0";
 }
 
 function extraWipe() {
